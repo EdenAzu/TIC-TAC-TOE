@@ -68,7 +68,7 @@ function gameEnd(flag){
             const currentClass= isPlayer_O_Turn? PLAYER_O : PLAYER_X
             if(currentClass=="o"){
                 winningMessageTextElement.innerHTML="Player O won!"
-                            }
+            }
             else{
                 winningMessageTextElement.innerHTML="Player X won!"
             }

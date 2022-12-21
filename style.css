@@ -19,7 +19,7 @@ p{
 }
 
 .board {
-	/* width: 100vw; */
+	width: 100vw;
 	display: grid;
 	justify-content: center;
 	align-content: center;
