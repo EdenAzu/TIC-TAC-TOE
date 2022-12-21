@@ -56,23 +56,26 @@ function userSelection(e){
     }else{
         isPlayer_O_Turn = !isPlayer_O_Turn
     }
+    
 
 }
 
 function gameEnd(flag){
     if (flag) {
-        window.confirm('Its a tie!')
+        winningMessageTextElement.innerHTML ="Its a tie!"
     }
     else {
             const currentClass= isPlayer_O_Turn? PLAYER_O : PLAYER_X
             if(currentClass=="o"){
-                window.confirm('Player O win')
-            }
+                winningMessageTextElement.innerHTML="Player O won!"
+                            }
             else{
-                window.confirm('Player X win')
+                winningMessageTextElement.innerHTML="Player X won!"
             }
     }
-   winningMessageElement.classList.add('show')
+    setTimeout(() => {
+        winningMessageElement.classList.add('show')
+    }, 3000);
 }
 
 function isTie(){
@@ -90,4 +93,6 @@ function resetBoard(){
     }else{
         boardElement.classList.add(PLAYER_X)
     }
+    winningMessageTextElement.innerHTML=""
+
 }
